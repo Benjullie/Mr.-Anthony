@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./index.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>LoginForm</title>
+<style>
+   *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:sans-serif ;
+}
+
+.form-container{
+
+    display: flex;
+    justify-content: center;
+    padding: 3em 0;
+    width: 90%;
+    border: transparent;
+    background-color: #ffff;
+    height: 100vh;
+    margin: auto;
+}
+
+.join{
+    display: flex;
+}
+
+.join-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 400px;
+}
+.join-container img{
+    width: 80%;
+}
+.line{
+    color: #eee;
+    margin-left: 2em;
+}
+.p-lorem{
+    line-height: 1.5rem;
+}
+.donation-type{
+    margin-top: 2em;
+    display: flex;
+    gap: 4rem;
+}
+.dona-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.dona-bg{
+    display: flex;
+    gap: 1rem;
+    background-color: #eee;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.2em 0.5em;
+    font-weight: 500;
+}
+ .fa-check-circle{
+    color: #00df9a;
+    
+}
+span{
+    color: #00df9a;
+}
+hr{
+    width: 0.5%;
+    margin: 0 2em;
+    height: 100vh;
+}
+label {
+    font-weight: 500;
+}
+.name-container{
+    display: flex;
+    gap: 2rem;
+}
+.first-name-con{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+input{
+    padding: 0.8em;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+}
+input:focus{
+    outline: 0;
+    border: 1px solid #00df9a;
+    border-radius: 5px;
+}
+h3{
+    margin-top: 2em;
+}
+.btn-con{
+    padding: 1.5em;
+}
+.donate-btn{
+    margin: auto;
+    padding: 1em 4em;
+    border: none;
+    background-color: #00df9a;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+.donate-btn:hover{
+    background: white;
+    color: #00df9a;
+    border:1px solid #00df9a ;
+}
+
+
+
+
+
+
+@media(max-width:480px){
+    .form-container{
+        flex-direction: column;
+    }   
+} 
+</style>
+
+</head>
+
+
+<body>
+    
+    <div class="form-container"> 
+    <div class="join-container">    
+    <div class="join">         
+    <h2>JOIN US TODAY</h2>    
+    <p class="line">_________</p>
+  </div> 
+  <img src="./image/dona-img.jpg"  alt="" />
+  <p class="p-lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt ad, 
+      temporibus rem laborum quis suscipit numquam quibusdam sint commodi id doloribus, quae maxime et expedita, minus dolorem. Explicabo, molestias officiis!</p>
+  <div class="donation-type">
+      <div class="dona-flex">
+      <p class="dona-bg"><i class="fa fa-check-circle" aria-hidden="true"></i>Single Donation</p>
+      <p class="dona-bg"><i class="fa fa-check-circle" aria-hidden="true"></i>Annual Support</p>
+      </div>
+      <div class="dona-flex">  
+      <p class="dona-bg"><i class="fa fa-check-circle" aria-hidden="true"></i>Monthly Donation</p>
+      <p class="dona-bg"><i class="fa fa-check-circle" aria-hidden="true"></i>Monthly Support</p>
+      </div>
+  </div>
+  </div>
+  <hr>
+    <form action="">
+    <h1>Be a <span>Donor</span></h1>
+    
+    <div class="name-container">
+    <div class="first-name-con">
+    <label for="first">First Name</label>
+    <input type="text" required id="first" name="first">
+    </div>
+    <div class="first-name-con">
+    <label for="surname">Surname</label>
+    <input type="text" required id="surname" name="surname">
+    </div>
+    </div>
+    <label for="email">Email Address</label>
+    <input type="email" required id="email" name="email">
+    <div class="name-container">
+        <div  class="first-name-con">
+        <label for="country">Country</label>
+        <input type="text">
+        </div>  
+        <div  class="first-name-con">
+        <label for="selection">Phone Number</label>
+        <input type="tel">
+        </div>
+    </div>
+    <label for="amount">Donation Amount</label>
+    <input type="number" name="amount" id="amount">
+    <label for="method">Payment Method</label>
+    <input type="text" name="method" id="method">
+    <h3>May we thank you publicly?</h3>
+    <div class="name-container">
+    <input type="radio">
+    <p>No keep my identity annonymous</p>
+    </div>
+    <div class="btn-con">
+    <button class="donate-btn">Donate</button>
+    </div>
+    </form>
+
+</div>
+
+    
+
+    
+</body>
+</html>
