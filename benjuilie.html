@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login Form</title>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-wrapper {
+    /* background-color: red; */
+    width: 300px;
+    height: 250px;
+    margin: 200px auto;
+}
+
+.login-h1 {
+    text-align: center;
+    
+}
+
+.input-username input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    background-color: #e7e7e7;
+    padding-left: 20px;
+    color: navy;
+}
+
+h1 {
+    font-family: monospace;
+    font-weight: 1000;
+    font-size: 40px;
+    color: navy;
+    
+}
+
+.dot {
+    margin-top: 30px;
+}
+
+.Remember-Forget {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.Forget a {
+    text-decoration: none;
+}
+
+.LOG input {
+    background-color: skyblue;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    outline: none;
+
+}
+
+.LOG input:hover {
+    cursor: pointer;
+}
+    </style>
+
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-h1">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="input-username dot">
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="input-username">
+            <input type="text" placeholder="Password">
+        </div>
+        <div class="Remember-Forget">
+            <div class="Remember">
+                <input type="checkbox" name="Remember me" value="Remember me"><span>Remember me</span>
+            </div>
+            <div class="Forget">
+                <a href="">Forget?</a>
+            </div>
+        </div>
+        <div class="LOG">
+            <input type="submit" value="LOGIN">
+        </div>
+    </div>
+</body>
+</html>
