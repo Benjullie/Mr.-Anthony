@@ -1,44 +1,21 @@
 
-
-
-// console.log(addNumbers(5,6))
-// addNumbers=(a,b)=>{
-//     return a+b;
-// }
-// let sum = addNumbers(2,5);
-// console.log(addNum(4,6));
-//
-// function addNum(a,b){
-//     return a+b;
-// }
-// getData =async ()=>{
-//     const response = await Axios.get("url")
-//     return response.body;
-// }
-// let rs = null;
-// getData = ()=>{
-//      Axios.get("url").then(response=>{
-//          rs = response.body;
-//      })
-// }
-//
-//alert("hellow world")
-function  getUsersAge(date){
-    let currentDate = new Date();
-    return  currentDate.getFullYear()-date.getFullYear();
+let button = document.querySelector(".submit-button");
+let input = document.querySelector("#number");
+button.addEventListener('click',game);
+function game(){
+    let value = input.value;
+    if(value.length<=0 || value ===""){
+        return;
+    }
+    let rand = Math.floor(Math.random() *3);
+    let difference = Math.abs(value-rand);
+    if(parseInt(value)=== rand){
+        console.log(rand)
+        alert("You are correct");
+    }else if(difference <=2){
+        console.log(rand)
+        alert("you are almost there")
+    }else {
+        alert(`you are wrong, the correct number is ${rand}`)
+    }
 }
-
-let name = prompt("Please enter your name");
-
-let dob = prompt("Please enter your DOB");
-
-let age = getUsersAge(new Date(dob));
-
-if(age <18){
-    alert("you are underAge")
-}
-console.log(age)
-
-alert(name+'your age is '+age);
-
-
