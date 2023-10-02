@@ -18,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -43,6 +44,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -67,7 +69,11 @@
       <workItem from="1695982873031" duration="1045000" />
       <workItem from="1695984206192" duration="2010000" />
       <workItem from="1695986412423" duration="405000" />
-      <workItem from="1695986997861" duration="2876000" />
+      <workItem from="1695986997861" duration="3513000" />
+      <workItem from="1695996514770" duration="1367000" />
+      <workItem from="1696239058958" duration="1850000" />
+      <workItem from="1696241142894" duration="641000" />
+      <workItem from="1696242037383" duration="1456000" />
     </task>
     <servers />
   </component>
