@@ -22,32 +22,42 @@
 //         p1.textContent =`you are wrong, the correct number is ${rand}`;
 //     }
 // }
+//
+const  height = document.querySelector(".height");
+const  weight = document.querySelector(".weight");
+const  p1 = document.querySelector(".p1");
+const calculateBmiButton = document.querySelector(".submit-button");
 
-// const  height = document.querySelector(".height");
-// const  weight = document.querySelector(".weight");
-// const  p1 = document.querySelector(".p1");
-// const calculateBmiButton = document.querySelector(".submit-button");
-//
-// calculateBmiButton.addEventListener('click',()=>{
-//     const newHeight = Number(height.value);
-//     const newWeight = Number(weight.value);
-//
-//
-//     const  heightSquare = Math.pow(newHeight ,2);
-//
-//     const  bmi = Number(newWeight/heightSquare);
-//     if(bmi >=25){
-//         p1.textContent =`Your BMI is ${bmi} and you are over weight`;
-//     }else if(bmi > 29.9){
-//         p1.textContent =`Your BMI is ${bmi} and you are obese`;
-//     }else if(bmi <18.5){
-//         p1.textContent = `Your BMI is ${bmi}, you are underweight`;
-//
-//     }else {
-//         p1.textContent =`Your BMI is ${bmi}, you have a normal BMI`;
-//     }
-// });
+calculateBmiButton.addEventListener('click',(event)=>{
+    event.preventDefault();
+    console.log(event.type)
 
+    const newHeight = Number(height.value);
+    const newWeight = Number(weight.value);
+
+
+    const  heightSquare = Math.pow(newHeight ,2);
+
+    const  bmi = Number(newWeight/heightSquare);
+    if(bmi >=25){
+        p1.textContent =`Your BMI is ${bmi} and you are over weight`;
+    }else if(bmi > 29.9){
+        p1.textContent =`Your BMI is ${bmi} and you are obese`;
+    }else if(bmi <18.5){
+        p1.textContent = `Your BMI is ${bmi}, you are underweight`;
+
+    }else {
+        p1.textContent =`Your BMI is ${bmi}, you have a normal BMI`;
+    }
+});
+
+///Todo: Optional parameter and required parameters
+
+function  addNumbers(num1, num2,age = 0){
+    const add = num1+num2;
+    console.log(`The sum is ${add} And you are ${age} years old`);
+}
+addNumbers(1,2);
 
 
 
