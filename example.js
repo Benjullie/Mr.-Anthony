@@ -28,36 +28,72 @@ const  weight = document.querySelector(".weight");
 const  p1 = document.querySelector(".p1");
 const calculateBmiButton = document.querySelector(".submit-button");
 
-calculateBmiButton.addEventListener('click',(event)=>{
-    event.preventDefault();
-    console.log(event.type)
+// calculateBmiButton.addEventListener('click',(event)=>{
+//     event.preventDefault();
+//     console.log(event.type)
+//
+//     const newHeight = Number(height.value);
+//     const newWeight = Number(weight.value);
+//
+//
+//     const  heightSquare = Math.pow(newHeight ,2);
+//
+//     const  bmi = Number(newWeight/heightSquare);
+//     if(bmi >=25){
+//         p1.textContent =`Your BMI is ${bmi} and you are over weight`;
+//     }else if(bmi > 29.9){
+//         p1.textContent =`Your BMI is ${bmi} and you are obese`;
+//     }else if(bmi <18.5){
+//         p1.textContent = `Your BMI is ${bmi}, you are underweight`;
+//
+//     }else {
+//         p1.textContent =`Your BMI is ${bmi}, you have a normal BMI`;
+//     }
+// });
+//
+// ///Todo: Optional parameter and required parameters
+//
+// function  addNumbers(num1, num2,age = 0){
+//     const add = num1+num2;
+//     console.log(`The sum is ${add} And you are ${age} years old`);
+// }
+// addNumbers(1,2);
 
-    const newHeight = Number(height.value);
-    const newWeight = Number(weight.value);
 
 
-    const  heightSquare = Math.pow(newHeight ,2);
+const  username = document.querySelector(".username");
+const  password = document.querySelector(".password");
 
-    const  bmi = Number(newWeight/heightSquare);
-    if(bmi >=25){
-        p1.textContent =`Your BMI is ${bmi} and you are over weight`;
-    }else if(bmi > 29.9){
-        p1.textContent =`Your BMI is ${bmi} and you are obese`;
-    }else if(bmi <18.5){
-        p1.textContent = `Your BMI is ${bmi}, you are underweight`;
+const submitButton = document.querySelector(".submit-button");
 
+const database = {
+    "username":"Giovanni",
+    "password":"12345"
+}
+
+submitButton.addEventListener("click",()=>{
+
+    let userNameValue = username.value;
+    let passwordValue = password.value;
+
+    if(database.username ===userNameValue && database.password ===passwordValue){
+        window.location.href = 'ehuntober.html'
     }else {
-        p1.textContent =`Your BMI is ${bmi}, you have a normal BMI`;
+        alert("username or password incorrect");
     }
 });
 
-///Todo: Optional parameter and required parameters
 
-function  addNumbers(num1, num2,age = 0){
-    const add = num1+num2;
-    console.log(`The sum is ${add} And you are ${age} years old`);
-}
-addNumbers(1,2);
+
+
+
+
+
+
+
+
+
+
 
 
 
