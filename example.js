@@ -23,10 +23,10 @@
 //     }
 // }
 //
-const  height = document.querySelector(".height");
-const  weight = document.querySelector(".weight");
-const  p1 = document.querySelector(".p1");
-const calculateBmiButton = document.querySelector(".submit-button");
+// const  height = document.querySelector(".height");
+// const  weight = document.querySelector(".weight");
+// const  p1 = document.querySelector(".p1");
+// const calculateBmiButton = document.querySelector(".submit-button");
 
 // calculateBmiButton.addEventListener('click',(event)=>{
 //     event.preventDefault();
@@ -59,47 +59,47 @@ const calculateBmiButton = document.querySelector(".submit-button");
 // }
 // addNumbers(1,2);
 
+//
+//
+// const  username = document.querySelector(".username");
+// const  password = document.querySelector(".password");
+//
+// const submitButton = document.querySelector(".submit-button");
+//
+// const database = {
+//     "username":"Giovanni",
+//     "password":"12345"
+// }
+//
+// submitButton.addEventListener("click",()=>{
+//
+//     let userNameValue = username.value;
+//     let passwordValue = password.value;
+//
+//     if(database.username ===userNameValue && database.password ===passwordValue){
+//         window.location.href = 'ehuntober.html'
+//     }else {
+//         alert("username or password incorrect");
+//     }
+// });
 
 
-const  username = document.querySelector(".username");
-const  password = document.querySelector(".password");
 
-const submitButton = document.querySelector(".submit-button");
 
-const database = {
-    "username":"Giovanni",
-    "password":"12345"
-}
 
-submitButton.addEventListener("click",()=>{
-
-    let userNameValue = username.value;
-    let passwordValue = password.value;
-
-    if(database.username ===userNameValue && database.password ===passwordValue){
-        window.location.href = 'ehuntober.html'
-    }else {
-        alert("username or password incorrect");
+async function  getUsers(){
+    const  rs = await  fetch("https://jsonplaceholder.typicode.com/posts");
+    const  response = await  rs.json();
+    response.forEach((post)=>{
+        console.log(post.id);
+    });
+    for (let i=0; i<response.length;i++){
+        console.log(response[i].id);
     }
-});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //console.log(response);
+}
+getUsers();
 
 
 
